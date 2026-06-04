@@ -1,0 +1,10 @@
+{
+  "common": {
+    "appName": "ERP System",
+    "language": "Language"
+  },
+  "home": {
+    "title": "Welcome to ERP",
+    "subtitle": "Project foundation is ready."
+  }
+}
