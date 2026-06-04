@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# ERP Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+เว็บแอปพลิเคชันสำหรับงานบัญชีและการจัดการธุรกิจ ครอบคลุมการ **ขาย**, **ซื้อ**, และ **คลังสินค้า**
 
-Currently, two official plugins are available:
+> ⚠️ โปรเจกต์อยู่ในช่วงเริ่มต้นพัฒนา (early development) — ฟีเจอร์และโครงสร้างอาจมีการเปลี่ยนแปลง
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ภาพรวม
 
-## React Compiler
+ระบบ ERP ฝั่ง frontend ที่ออกแบบมาเพื่อรองรับงานหลักขององค์กร ได้แก่
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📊 **บัญชี (Accounting)** — บันทึกบัญชี รายรับรายจ่าย และรายงานทางการเงิน
+- 🛒 **ขาย (Sales)** — ใบเสนอราคา ใบสั่งขาย และใบกำกับภาษี
+- 📦 **ซื้อ (Purchasing)** — ใบสั่งซื้อ และการจัดการผู้ขาย (suppliers)
+- 🏭 **คลังสินค้า (Inventory)** — จัดการสต็อกสินค้า รับเข้า–เบิกออก และการตรวจนับ
 
-## Expanding the ESLint configuration
+## เทคโนโลยีที่ใช้
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vite.dev/)
+- [ESLint](https://eslint.org/)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## เริ่มต้นใช้งาน
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### ความต้องการของระบบ
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (แนะนำเวอร์ชัน LTS ล่าสุด)
+
+### ติดตั้ง dependencies
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### รันโหมดพัฒนา (development)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+### build สำหรับ production
+
+```bash
+npm run build
+```
+
+### ดูตัวอย่าง production build
+
+```bash
+npm run preview
+```
+
+### ตรวจสอบ lint
+
+```bash
+npm run lint
+```
+
+## สถานะการพัฒนา
+
+| โมดูล | สถานะ |
+| --- | --- |
+| บัญชี (Accounting) | 🚧 กำลังพัฒนา |
+| ขาย (Sales) | 🚧 กำลังพัฒนา |
+| ซื้อ (Purchasing) | 🚧 กำลังพัฒนา |
+| คลังสินค้า (Inventory) | 🚧 กำลังพัฒนา |
